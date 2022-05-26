@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+
+    <title>Date & Time Calculator</title>
+
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 4em 10em;
+      }
+
+      input[type="submit"] {
+        grid-column: 1 / span 2;
+      }
+
+      form {
+        margin: 1em;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <form id="daysBetween">
+      Calculate number of days
+      <div class="grid">
+        <label for="daysBetweenStart">from</label>
+        <input class="date-input" id="daysBetweenStart" placeholder="enter date" type="text">
+        <label for="daysBetweenEnd">to</label>
+        <input class="date-input" id="daysBetweenEnd" placeholder="enter date" type="text">
+        <input type="submit" value="Calculate">
+      </div>
+      <div>Result: <span id="daysBetweenOutput"></span></div>
+    </form>
+
+    <form id="afterIntervalTimes">
+      Show date
+      <div class="grid">
+        <label for="afterIntervalTimesStart">from</label>
+        <input class="date-time" id="afterIntervalTimesStart" placeholder="enter date" type="text">
+        <label for="afterIntervalTimesInterval">after (</label>
+        <input class="period-input" id="afterIntervalTimesInterval" placeholder="enter period" type="text">
+        <label for="afterIntervalTimesMultiplier">times</label>
+        <input class="time-input" id="afterIntervalTimesMultiplier" placeholder="enter positive number" type="text">
+        )
+        <input type="submit" value="Calculate">
+      </div>
+      <div>Result: <span id="afterIntervalTimesOutput"></span></div>
+    </form>
+
+    <form id="recurringEvent">
+      Show recurring event dates
+      <div class="grid">
+        <label for="recurringEventStart">from</label>
+        <input class="date-time-input" id="recurringEventStart" placeholder="enter date and time" type="text">
+        <label for="recurringEventEnd">to</label>
+        <input class="date-time-input" id="recurringEventEnd" placeholder="enter date and time" type="text">
+        <label for="recurringEventInterval">every</label>
+        <input class="period-input" id="recurringEventInterval" placeholder="enter period" type="text">
+        <label for="recurringEventTimeOfDay">at</label>
+        <input class="time-input" id="recurringEventTimeOfDay" placeholder="enter time of day" type="text">
+        <input type="submit" value="Calculate">
+      </div>
+      <div>Result: <span id="recurringEventOutput"></span></div>
+    </form>
+
+    <script src="bundle.js"></script>
+
+  </body>
+
+</html>
